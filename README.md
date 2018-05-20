@@ -1,6 +1,6 @@
 ## HOC Demo app
 
-clone repo
+clone the repo
 
 ```
 yarn && yarn start
