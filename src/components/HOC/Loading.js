@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Loading.css";
 
 const isEmpty = prop =>
   prop === null ||
@@ -6,7 +7,7 @@ const isEmpty = prop =>
   (prop.hasOwnProperty("length") && prop.length === 0) ||
   (prop.constructor === Object && Object.keys(prop).length === 0);
 
-const LoadingHOC = loadingProp => WrappedComponent => {
+const Loading = loadingProp => WrappedComponent => {
   return class LoadingHOC extends Component {
     componentDidMount() {
       this.startTimer = Date.now();
@@ -32,4 +33,4 @@ const LoadingHOC = loadingProp => WrappedComponent => {
   };
 };
 
-export default LoadingHOC;
+export default Loading;
